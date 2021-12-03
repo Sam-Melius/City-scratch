@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-// import { createCountString } from './utils.js';
+import { createCountString } from './utils.js';
 const skylineDropdown = document.querySelector('#skyline-dropdown');
 const skylineImageEl = document.querySelector('#skyline-image');
 const waterfrontDropdown = document.querySelector('#waterfront-dropdown');
@@ -19,14 +19,14 @@ let castleCount = 0;
 let sloganArray = [];
 
 
-// set event listeners 
+//set event listeners 
 
 waterfrontDropdown.addEventListener('change', () => {
     const id = waterfrontDropdown.value;
 
     waterfrontCount++;
 
-    waterfrontImageEl.src = `./assets/waterfront-${id}.png`;
+    waterfrontImageEl.src = `./assets/${id}-waterfront.jpg`;
 
     displayStats();
 });
@@ -36,7 +36,7 @@ skylineDropdown.addEventListener('change', () => {
 
     skylineCount++;
 
-    skylineImageEl.style.backgroundImage = `./assets/skyline-${id}.png`;
+    skylineImageEl.src = `./assets/${id}-skyline.jpg`;
 
     displayStats();
 });
@@ -46,43 +46,46 @@ castleDropdown.addEventListener('change', () => {
 
     castleCount++;
 
-    castleImageEl.src = `./assets/castle-${id}.png`;
+    castleImageEl.src = `./assets/${id}-castle.jpg`;
 
     displayStats();
 });
 
 // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+//   use user input to update state 
+//   update DOM to reflect the new state
   
-// sloganButton.addEventListener('click', () => {
+sloganButton.addEventListener('click', () => {
 
-//     const newSlogan = sloganInputEl.value;
+    const newSlogan = sloganInputEl.value;
 
-//     sloganArray.push(newSlogan);
-
-//     sloganListEl.textContent = '';
+    sloganArray.push(newSlogan);
+    
+    sloganListEl.textContent = '';
+    sloganInputEl.value = '';
   
-//     displaySlogans();
-// });
+    displaySlogans();
+});
 
-// function displayStats() {
-//     const statsString = createCountString(waterfrontCount, skylineCount, castleCount);
+function displayStats() {
+    const statsString = createCountString(waterfrontCount, skylineCount, castleCount);
 
-//     countEl.textContent = statsString;
-// }
+    countEl.textContent = statsString;
+}
 
-// function displaySlogans() {
-//     sloganListEl.textContent = '';
+function displaySlogans() {
+    sloganListEl.textContent = '';
 
-//     for (let slogan of sloganArray) {
-//         const p = document.createElement('p');
+    for (let slogan of sloganArray) {
+        const p = document.createElement('p');
 
-//         p.classList.add('slogan');
+        p.classList.add('slogan');
 
-//         p.textContent = slogan;
+        p.textContent = slogan;
 
-//         sloganListEl.append(p);
-//     }
-
-// }
+        sloganListEl.append(p);
+        
+        
+    }
+    
+}
