@@ -89,3 +89,23 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    border: solid 1px pink;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+}
+
+img {
+    width: 600px
+}
+
+.slogans, .count {
+    background-color: white;
+    padding: 20px;
+}
