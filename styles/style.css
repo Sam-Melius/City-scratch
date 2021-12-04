@@ -22,10 +22,10 @@ body {
     --color4: hsla(45, 73%, 98%, 1);
     --color5: hsla(224, 40%, 79%, 1); */
     
-    --header-height: 80px;
+    /* --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
-    --footer-height: 25px;
+    --footer-height: 25px; */
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
@@ -33,19 +33,33 @@ body {
 
 main {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-bottom: calc(var(--footer-height));
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: calc(var(--footer-height)); 
+    grid-template-columns: 1fr 1fr 1fr;
+    
 }
+/* main {
+    display: inline-flex;
+    background-color: white;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    
+} */
 
 section {
     background-color: var(--color5);
     max-width: 80%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
@@ -71,13 +85,13 @@ h2 {
     margin-right: 20px;
 }
 
-header img {
+ header img {
     height: var(--header-height);
 }
 
 p {
     margin: var(--gutter);
-}
+} 
   
 footer {
     position: fixed;
@@ -90,23 +104,46 @@ footer {
     box-shadow: var(--shadow);
 }
 
-.numbers {
-    display: flex;
-    flex-wrap: wrap;
-}
-.box {
+
+/* .box {
     border: solid 1px pink;
     width: 100px;
     text-align: center;
     padding: 5px;
-}
+}  */
 
 img {
-    width: 100px
+    max-width: 300px;
+    max-height: 300px;
     
 }
 
 .slogans, .count {
     background-color: white;
     padding: 20px;
+    align-content: center;
+    align-items: center;
+}
+
+.waterfront {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 300px;
+    color: white;
+}
+
+.skyline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 300px;
+    color: white;
+}
+.castle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 300px;
+    color: white;
 }

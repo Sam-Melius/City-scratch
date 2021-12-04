@@ -15,30 +15,34 @@
 <body>
     
     <main>
+        <section>
         <label>
             Waterfront
             <select id="waterfront-dropdown">
                 <option value="1">Night City</option>
                 <option value="2">Water City</option>
-                <option value="3">Lakeview</option>
+                <option value="3">Lakeview City</option>
                 
             </select>
-        </label>
-        <label>
+        
             <div class="waterfront">
-                <img id="waterfront-image" />
-            </div>
+                <img id="waterfront-image" >
+            </div> 
+        </label>
+
+        <label>
              Skyline
             <select id="skyline-dropdown">
-                <option value="1">Sunny city</option>
-                <option value="2">Brooklyn</option>
-                <option value="3">Night city</option>
+                <option value="1">Bay City</option>
+                <option value="2">Sunny City</option>
+                <option value="3">Night City</option>
                 
             </select>
-        </label>
+        
             <div class="skyline">
                 <img id="skyline-image" />
             </div>
+        </label>
             <label>
                 Castle
                 <select id="castle-dropdown">
@@ -47,22 +51,25 @@
                     <option value="3">Castle 3</option>
                     
                 </select>
-            </label>
-            <label>
+            
                 <div class="castle">
                     <img id="castle-image" />
-                </div>
+                </div> 
+            </section>
             <div class="slogans">
-                <label>
-                    New slogan
+            </label>
+            <label>
+                    New Slogan
                     <input id="slogan-input" />
                 </label>
                 <button id="slogan-button">Add a slogan</button>
+                <button id="clear-button">Clear Slogan</button>
                 <div class="list"></div>
             </div>
             <div class="count">
 
             </div>
+        
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
