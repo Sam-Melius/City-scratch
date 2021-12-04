@@ -10,7 +10,7 @@ const sloganInputEl = document.querySelector('#slogan-input');
 const sloganButton = document.querySelector('#slogan-button');
 const sloganListEl = document.querySelector('.list');
 const countEl = document.querySelector('.count'); 
-
+// const clearButton = document.querySelector('clear-button');
 
 // let state
 let waterfrontCount = 0;
@@ -57,15 +57,15 @@ castleDropdown.addEventListener('change', () => {
   
 sloganButton.addEventListener('click', () => {
 
-    const newSlogan = sloganInputEl.value;
-
-    sloganArray.push(newSlogan);
-    
-    sloganListEl.textContent = '';
-    sloganInputEl.value = '';
-  
     displaySlogans();
 });
+
+// clearButton.addEventListener('click', () => {
+
+//     const clearSlogan = sloganListEl.value();
+//     sloganArray.push(clearSlogan);
+//     displaySlogans();
+// });
 
 function displayStats() {
     const statsString = createCountString(waterfrontCount, skylineCount, castleCount);
@@ -74,6 +74,10 @@ function displayStats() {
 }
 
 function displaySlogans() {
+    const newSlogan = sloganInputEl.value;
+
+    sloganArray.push(newSlogan);
+
     sloganListEl.textContent = '';
 
     for (let slogan of sloganArray) {
@@ -84,7 +88,6 @@ function displaySlogans() {
         p.textContent = slogan;
 
         sloganListEl.append(p);
-        
         
     }
     
